@@ -1,38 +1,64 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #3d6666;
+  font-family: "Space Mono", monospace;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  /* text-align: center; */
+  letter-spacing: 2.08px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* removes arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0; */
+  /* padding: 0; */
+  width: 80%;
+
+  max-width: 920px;
+  min-width: 375px;
+  height: 481px;
+  /* margin: 0 auto; */
+  background-color: #ffffff;
+  border-radius: 25px;
+
+  /* box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735); */
+}
+
+.bill {
+  /* margin: 10px;  TODO! needs to change */
+}
+
+.bill input {
+  display: block;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  width: 75%;
+}
+
+.num-people input {
+  display: block;
+  width: 75%;
+}
+
+.percentage button {
+  display: flex;
+  /* flex-wrap: wrap */
+}
+
+.bill,
+.percentage,
+.num-people {
+  margin: 10px;
 }
