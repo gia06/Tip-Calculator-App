@@ -1,48 +1,79 @@
-// import logo from './logo.svg';
+import logo from './images/logo.svg';
 import "./App.css";
+import InputContainer from './components/InputContainer'
+import ResultsContainer from './components/ResultsContainer';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>
-        SPLI
-        <br />
-        TTER
-      </h1>
+      
+      <div>
+        <img src={logo} alt="splitter logo"></img>
+      </div>
+      
+      <div className="calc-container">
+        <InputContainer/>
 
-      <div class="calc-container">
-        <div class="input-container">
-          <div class="bill">
+        <ResultsContainer/>
+
+        
+        {/* <div className="input-container">
+          <div className="bill">
             <label>
               Bill
-              <input type="number" min="1" placeholder="0" />
+              <input className="input-with-icon" type="number" min="1" placeholder="0" />
             </label>
           </div>
 
-          <div class="percentage">
-            <p>Select Tip %</p>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>20%</button>
-            <button>25%</button>
-            <button>50%</button>
+          <p>Select Tip %</p>
+
+          <div className="percentage">
+            <button className="percentage-btn">5%</button>
+            <button className="percentage-btn">10%</button>
+            <button className="percentage-btn">15%</button>
+            <button className="percentage-btn">25%</button>
+            <button className="percentage-btn">50%</button>
+            <input type="number" placeholder="Custom" min="1"></input>
+
           </div>
 
-          <div class="num-people">
+          <div className="num-people">
             <label>
               Number of People
-              <input type="number" min="10" max="100" />
+              <input className="input-with-icon" type="number" min="10" max="100" placeholder="0"/>
             </label>
           </div>
-        </div>
+        </div> */}
 
-        <div class="results-container">Will add later</div>
 
-        <div></div>
+        {/* <div className="results-container">
+
+          <div className=''>
+            <div className='txt-box'>
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            
+            <div className='number-box'>
+              tip amount in number ($)
+            </div>
+          </div>
+
+          <div className=''>
+            <div className='txt-box'>
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+
+            <div className='number-vox'>
+              total result in number ($)
+            </div>
+          </div>
+
+          <button>Reset</button>
+        </div> */}
+
       </div>
     </div>
   );
 }
-
-export default App;

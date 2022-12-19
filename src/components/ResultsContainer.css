@@ -1,0 +1,8 @@
+.results-container {
+    width: 40%;
+    margin: 10px 0;
+    min-width: 311px;
+    border-radius: 15px;
+    background-color: hsl(183, 100%, 15%);
+  }
+  

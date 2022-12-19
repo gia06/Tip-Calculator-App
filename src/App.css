@@ -1,15 +1,20 @@
+body {
+  background-color: hsl(185, 41%, 84%);
+  margin: 0;
+  padding: 0
+}
+
 .App {
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   align-items: center;
+  width: 100%;
   color: #3d6666;
   font-family: "Space Mono", monospace;
 }
 
-h1 {
-  /* text-align: center; */
-  letter-spacing: 2.08px;
+img {
+  margin-top: 50px;
 }
 
 /* removes arrows from number input */
@@ -22,43 +27,16 @@ input::-webkit-inner-spin-button {
 .calc-container {
   display: flex;
   flex-wrap: wrap;
-  /* margin: 0; */
-  /* padding: 0; */
-  width: 80%;
-
+  margin-top: 100px;
+  padding: 40px 0;
+  
+  margin: 80 auto;
+  justify-content: space-evenly; 
+  width: 100%;
   max-width: 920px;
   min-width: 375px;
-  height: 481px;
-  /* margin: 0 auto; */
   background-color: #ffffff;
   border-radius: 25px;
 
-  /* box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735); */
-}
-
-.bill {
-  /* margin: 10px;  TODO! needs to change */
-}
-
-.bill input {
-  display: block;
-  /* margin: 0 auto; */
-  overflow: hidden;
-  width: 75%;
-}
-
-.num-people input {
-  display: block;
-  width: 75%;
-}
-
-.percentage button {
-  display: flex;
-  /* flex-wrap: wrap */
-}
-
-.bill,
-.percentage,
-.num-people {
-  margin: 10px;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
 }
