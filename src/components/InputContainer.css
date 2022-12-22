@@ -1,76 +1,80 @@
-
 .input-container {
-    margin: 10px 0;
-    width: 40%;
-    min-width: 311px;
-    /* max-width: 355px; */
-    /* background-color: red;  */
+  margin: 10px 0;
+  width: 40%;
+  min-width: 311px;
+  /* max-width: 355px; */
+  /* background-color: red;  */
 }
 
 .bill {
   margin-bottom: 40px;
 }
 
-label, p {
+label,
+p {
   /* margin: 0; */
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
 }
 
-.input-with-icon {
-    display: block;
-    margin: 0 ;
-    padding: 0 17px;
-    width: calc(100% - 34px);
-    height: 40px;
-    font-family: 'Space Mono';
-    font-size: 24px;
-    font-weight: 700;
-    border: 0;
-    border-radius: 5px;
-    background-color: #F3F9FA;
-    color: #00474B;
-    background-image: url(../images/icon-dollar.svg);
-    background-repeat: no-repeat;
-    background-position: top 12px left 13px;
-    background-color: F3F9FA;
-    text-align: right;
-  }
-  
-  .percentage {
-    /* justify-content: unset; */
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-evenly; */
-    width: 100%;
-    margin: 0 ;
-    /* margin: 0 auto; */
-    /* background-color: blue; */
-    /* gap: 10px; */
-  }
-  
-  .percentage-btn {
-    background: #00474B;
-    margin: 8px ;
-    padding: 0;
-    color: #FFFFFF;
-    cursor: pointer;
-    height: 48px;
-    width: 35%;
-    max-width: 146px;
-    border-radius: 5px;
-    border: 0;
-    font-family: 'Space Mono';
-    font-size: 24px;
-    font-weight: 700;
-  
-  
-    /* //////////////////////////////// */
-  
-    /* width: 146px;
+.main-input {
+  display: block;
+  margin: 0;
+  padding: 0 17px;
+  width: calc(100% - 38px);
+  height: 40px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  border: 2px solid #f3f9fa;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  color: #00474b;
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: top 12px left 13px;
+  background-color: F3F9FA;
+  text-align: right;
+}
+
+.main-input:focus {
+  outline-style: none;
+  border: 2px solid #26c2ae;
+}
+
+.percentage {
+  /* justify-content: unset; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  width: 100%;
+  margin: 0;
+  /* margin: 0 auto; */
+  /* background-color: blue; */
+  /* gap: 10px; */
+}
+
+.percentage-btn {
+  background: #00474b;
+  margin: 8px;
+  padding: 0;
+  color: #ffffff;
+  cursor: pointer;
+  height: 48px;
+  width: 35%;
+  max-width: 146px;
+  border-radius: 5px;
+  border: 0;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+
+  /* //////////////////////////////// */
+
+  /* width: 146px;
     border: none;
     margin-bottom: 16px;
     font-family: 'Space Mono';
@@ -78,26 +82,40 @@ label, p {
     font-weight: 700;
     font-size: 24px;
     text-align: center; */
-  }
-  
-  .percentage-btn:hover {
-    background-color: #9FE8DF;
-    color: #00474B
-  }
+}
 
-  .percentage input {
-    width: 70px;
-    text-align: center;
-    height: 48px;
-    width: 71;
-    margin: 8px auto ;
-    padding: 0 17px;
-    border: 0;
-    border-radius: 5px;
-    color: #00474B;
-    font-family: 'Space Mono';
-    font-size: 24px;
-    font-weight: 700;
-    text-align: right;
+.percentage-btn:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+}
 
-  }
+.percentage-btn:focus {
+  background-color: #26C2AE;
+}
+
+.custom-input {
+  width: 70px;
+  text-align: center;
+  height: 48px;
+  width: 71;
+  margin: 8px auto;
+  padding: 0 17px;
+  border: 2px solid #f3f9fa;
+  border-radius: 5px;
+  color: #00474b;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  background-color: #f3f9fa;
+}
+
+.custom-input:focus {
+  outline-style: none;
+  border: 2px solid #26c2ae;
+}
+
+.warning {
+  float: right;
+  color: #E17457
+}
