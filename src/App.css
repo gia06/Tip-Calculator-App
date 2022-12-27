@@ -1,14 +1,14 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(185, 41%, 84%);
   margin: 0;
   padding: 0; 
-  /* overflow: hidden */
+  /* height: 100vh;  */
+  /* overflow: hidden
+   */
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-} */
-
 
 .App {
   display: flex;
@@ -19,7 +19,7 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-img {
+.logo {
   margin-top: 50px;
 }
 
@@ -33,14 +33,22 @@ input::-webkit-inner-spin-button {
 .calc-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 100px;
-  padding: 40px 0;
-  margin: 80 auto;
+  margin-top: 40px;
+  padding: 32px 0;
+  margin-top: 34px;
   justify-content: space-evenly; 
   width: 100%;
   max-width: 920px;
   min-width: 375px;
+  /* height: 100vh;  */
   background-color: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+}
+
+
+@media  screen and (max-width: 621px) {
+  .calc-container {
+    /* height: 100vh; */
+  }
 }

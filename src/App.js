@@ -6,15 +6,15 @@ import { useState } from "react";
 
 export default function App() {
   const [bill, setBill] = useState("");
-  const [numPeople, setNumPeople] = useState("");
+  const [numPeople, setNumPeople] = useState(1);
   const [percentage, setPercentage] = useState("");
   const [customPercentage, setCustomPercentage] = useState("");
-  const [tipAmount, setTipAmount] = useState("");
-  const [Total, setTotal] = useState("");
+  const [tipAmount, setTipAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0.0);
 
   return (
     <div className="App">
-      <div>
+      <div className="logo">
         <img src={logo} alt="splitter logo"></img>
       </div>
 
@@ -24,13 +24,20 @@ export default function App() {
           setBill={setBill}
           numPeople={numPeople}
           setNumPeople={setNumPeople}
-          percentage={percentage}
-          setPercentage={setPercentage}
           customPercentage={customPercentage}
-          setCustomPercentage={setCustomPercentage}
+          setTipAmount={setTipAmount}
+          setTotalAmount={setTotalAmount}
         />
 
-        <ResultsContainer />
+        <ResultsContainer
+          tipAmount={tipAmount}
+          setTipAmount={setTipAmount}
+          totalAmount={totalAmount}
+          setTotalAmount={setTotalAmount}
+          setBill={setBill}
+          setCustomPercentage={setCustomPercentage}
+          setNumPeople={setNumPeople}
+        />
       </div>
     </div>
   );

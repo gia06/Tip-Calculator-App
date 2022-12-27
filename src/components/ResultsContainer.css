@@ -1,8 +1,9 @@
 .results-container-wrapper {
   display: flex;
   justify-content: center;
-  width: 40%;
-  height: 30em;
+  width: 45%;
+  /* height: 25em; */
+  /* height: 25vh; */
   margin: 10px 0;
   min-width: 311px;
   border-radius: 15px;
@@ -11,6 +12,10 @@
 
 .results-container {
   width: 80%;
+}
+results-container p {
+  margin: 0;
+  color: rgb(161, 153, 141);
 }
 
 .results-box {
@@ -33,11 +38,6 @@ h4 {
   color: rgb(77, 220, 202);
   /* font-size: 32px; */
 
-}
-
-p {
-  margin: 0;
-  color: rgb(161, 153, 141);
 }
 
 h2 {

@@ -1,9 +1,11 @@
 .input-container {
   margin: 10px 0;
-  width: 40%;
+  width: 45%;
+  /* height: 25em; */
   min-width: 311px;
+  max-width: 379;
   /* max-width: 355px; */
-  /* background-color: red;  */
+  /* background-color: blue;  */
 }
 
 .bill {
@@ -40,6 +42,11 @@ p {
   text-align: right;
 }
 
+.main-input:hover {
+  outline-style: none;
+  border: 2px solid #26c2ae;
+}
+
 .main-input:focus {
   outline-style: none;
   border: 2px solid #26c2ae;
@@ -47,11 +54,14 @@ p {
 
 .percentage {
   /* justify-content: unset; */
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-evenly; */
+  /* display: grid; */
+  grid-template-columns: auto auto auto;
+  /* gap: 16px; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between;    */
   width: 100%;
   margin: 0;
+  /* background-color: red; */
   /* margin: 0 auto; */
   /* background-color: blue; */
   /* gap: 10px; */
@@ -64,10 +74,16 @@ p {
   color: #ffffff;
   cursor: pointer;
   height: 48px;
-  width: 35%;
+
+  width: 117px;
+  width: 4.6vw;
   max-width: 146px;
+  /* max-width: 146px;
+  min-width: 117px; */
+
+  outline-style: none;
   border-radius: 5px;
-  border: 0;
+  border: 0;  
   font-family: "Space Mono";
   font-size: 24px;
   font-weight: 700;
@@ -96,10 +112,11 @@ p {
 .custom-input {
   width: 70px;
   text-align: center;
-  height: 48px;
-  width: 71;
-  margin: 8px auto;
+  height: 44px;
+  width: 79px;
+  /* margin: 8px auto; */
   padding: 0 17px;
+  margin: 8px;
   border: 2px solid #f3f9fa;
   border-radius: 5px;
   color: #00474b;
