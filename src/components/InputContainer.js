@@ -39,10 +39,7 @@ export default function Test(props) {
             placeholder="0"
             min="1"
             onChange={(event) => {
-              event.target.value.length < 9 && setBill(event.target.value)
-              // if(event.target.value.length < 9) {
-              //   setBill(event.target.value)
-              // }
+              event.target.value.length < 9 && setBill(event.target.value);
             }}
             value={bill}
           />
