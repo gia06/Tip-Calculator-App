@@ -1,0 +1,119 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 45%;
+  min-width: 311px;
+  max-width: 379px;
+  height: 388px;
+}
+
+label,
+p {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-input {
+  display: block;
+  margin: 0;
+  padding: 0 17px;
+  width: 100%;
+  height: 48px;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  border: 2px solid #f3f9fa;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  color: #00474b;
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: top 16px left 19px;
+  background-color: F3F9FA;
+  text-align: right;
+}
+
+.main-input:hover,
+.main-input:focus {
+  outline-style: none;
+  border: 2px solid #26c2ae;
+}
+
+.percentage {
+  display: grid;
+  gap: 16px 14px;
+
+  grid-template-columns: repeat(3, 2fr);
+  width: 100%;
+  margin: 0;
+}
+
+.percentage-btn {
+  background: #00474b;
+  padding: 0;
+  color: #ffffff;
+  cursor: pointer;
+  height: 48px;
+  outline-style: none;
+  border-radius: 5px;
+  border: 0;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.custom-input,
+.percentage-btn {
+  width: 117px;
+}
+
+@media screen and (max-width: 846px) {
+  .percentage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .percentage-btn {
+    width: 146px;
+  }
+
+  .custom-input,
+  .percentage-btn {
+    width: 146.6px;
+  }
+}
+
+.percentage-btn:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+.percentage-btn:focus {
+  background-color: #26c2ae;
+}
+
+.custom-input {
+  border: 2px solid #f3f9fa;
+  border-radius: 5px;
+  color: #00474b;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #f3f9fa;
+}
+
+.custom-input:focus {
+  outline-style: none;
+  border: 2px solid #26c2ae;
+}
+
+.warning {
+  float: right;
+  color: #e17457;
+}

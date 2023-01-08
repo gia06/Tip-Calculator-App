@@ -1,48 +1,59 @@
-// import logo from './logo.svg';
+import logo from "./images/logo.svg";
 import "./App.css";
+import InputContainer from "./components/InputContainer";
+import ResultsContainer from "./components/ResultsContainer";
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  const [bill, setBill] = useState("");
+  const [numPeople, setNumPeople] = useState(1);
+  const [tipAmount, setTipAmount] = useState("0.00");
+  const [totalAmount, setTotalAmount] = useState("0.00");
+
+  const calculate = (percentageValue) => {
+    if (
+      bill === 0 ||
+      isNaN(bill) ||
+      bill.length === 0 ||
+      numPeople === 0 ||
+      isNaN(numPeople) ||
+      numPeople.length === 0
+    ) {
+      setTipAmount("0.00");
+      setTotalAmount("0.00");
+    } else {
+      const tip = (bill * percentageValue) / 100;
+      const total = (bill + tip) / numPeople;
+
+      setTipAmount(tip.toFixed(2));
+      setTotalAmount(total.toFixed(2));
+    }
+  };
+
   return (
     <div className="App">
-      <h1>
-        SPLI
-        <br />
-        TTER
-      </h1>
+      <div className="logo">
+        <img src={logo} alt="splitter logo"></img>
+      </div>
 
-      <div class="calc-container">
-        <div class="input-container">
-          <div class="bill">
-            <label>
-              Bill
-              <input type="number" min="1" placeholder="0" />
-            </label>
-          </div>
+      <div className="calc-container">
+        <InputContainer
+          bill={bill}
+          setBill={setBill}
+          numPeople={numPeople}
+          setNumPeople={setNumPeople}
+          calculate={calculate}
+        />
 
-          <div class="percentage">
-            <p>Select Tip %</p>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>20%</button>
-            <button>25%</button>
-            <button>50%</button>
-          </div>
-
-          <div class="num-people">
-            <label>
-              Number of People
-              <input type="number" min="10" max="100" />
-            </label>
-          </div>
-        </div>
-
-        <div class="results-container">Will add later</div>
-
-        <div></div>
+        <ResultsContainer
+          tipAmount={tipAmount}
+          setTipAmount={setTipAmount}
+          totalAmount={totalAmount}
+          setTotalAmount={setTotalAmount}
+          setBill={setBill}
+          setNumPeople={setNumPeople}
+        />
       </div>
     </div>
   );
 }
-
-export default App;
