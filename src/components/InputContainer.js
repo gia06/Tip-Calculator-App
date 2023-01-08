@@ -1,31 +1,10 @@
 import "./InputContainer.css";
 
 export default function Test(props) {
-  const {
-    bill,
-    setBill,
-    numPeople,
-    setNumPeople,
-    CustomPercentage,
-    setTipAmount,
-    setTotalAmount,
-  } = props;
+  const { bill, setBill, numPeople, setNumPeople, calculate } = props;
 
   const error = {
     border: "2px solid #E17052",
-  };
-
-  const calculate = (percentageValue) => {
-    if (Number(bill) !== 0 && Number(numPeople) !== 0) {
-      const tip = (bill * percentageValue) / 100;
-      const total = (bill + tip) / numPeople;
-
-      setTipAmount(tip);
-      setTotalAmount(total);
-    } else {
-      setTipAmount(0.0);
-      setTotalAmount(0.0);
-    }
   };
 
   return (
@@ -39,7 +18,8 @@ export default function Test(props) {
             placeholder="0"
             min="1"
             onChange={(event) => {
-              event.target.value.length < 9 && setBill(event.target.value);
+              event.target.value.length < 7 &&
+                setBill(event.target.valueAsNumber);
             }}
             value={bill}
           />
@@ -89,15 +69,16 @@ export default function Test(props) {
           type="number"
           placeholder="Custom"
           min="1"
-          onChange={(event) => calculate(event.target.value)}
-          value={CustomPercentage}
+          onChange={(event) =>
+            event.target.value.length < 4 && calculate(event.target.value)
+          }
         ></input>
       </div>
 
       <div className="num-people">
         <label>
           Number of People
-          {Number(numPeople) === 0 ? (
+          {numPeople === 0 || numPeople.length === 0 || isNaN(numPeople) ? (
             <span className="warning">Can't be zero</span>
           ) : (
             ""
@@ -108,9 +89,13 @@ export default function Test(props) {
             min="1"
             max="100"
             placeholder="0"
-            onChange={(event) => setNumPeople(event.target.value)}
+            onKeyDown={(event) => event.key === "." && event.preventDefault()}
+            onChange={(event) =>
+              event.target.value.length < 4 &&
+              setNumPeople(event.target.valueAsNumber)
+            }
             value={numPeople}
-            style={Number(numPeople) === 0 ? error : {}}
+            style={numPeople === 0 || isNaN(numPeople) ? error : {}}
           />
         </label>
       </div>

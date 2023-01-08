@@ -1,26 +1,31 @@
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(185, 41%, 84%);
+* {
   margin: 0;
-  padding: 0; 
-  /* height: 100vh;  */
-  /* overflow: hidden
-   */
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  width: 100%;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   width: 100%;
+  max-width: 920px;
   color: #3d6666;
   font-family: "Space Mono", monospace;
 }
 
 .logo {
-  margin-top: 50px;
+  margin-top: 163px;
+  margin-bottom: 87px;
 }
 
 /* removes arrows from number input */
@@ -32,23 +37,30 @@ input::-webkit-inner-spin-button {
 
 .calc-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 40px;
+  align-items: center;
   padding: 32px 0;
-  margin-top: 34px;
-  justify-content: space-evenly; 
   width: 100%;
   max-width: 920px;
   min-width: 375px;
-  /* height: 100vh;  */
   background-color: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  height: 481px;
 }
 
+@media screen and (max-width: 621px) {
+  .logo {
+    margin-top: 50px;
+    margin-bottom: 41px;
+  }
 
-@media  screen and (max-width: 621px) {
   .calc-container {
-    /* height: 100vh; */
+    height: 100vh;
+  }
+
+  body {
+    overflow: hidden;
   }
 }

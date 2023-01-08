@@ -7,10 +7,28 @@ import { useState } from "react";
 export default function App() {
   const [bill, setBill] = useState("");
   const [numPeople, setNumPeople] = useState(1);
-  const [percentage, setPercentage] = useState("");
-  const [customPercentage, setCustomPercentage] = useState("");
-  const [tipAmount, setTipAmount] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0.0);
+  const [tipAmount, setTipAmount] = useState("0.00");
+  const [totalAmount, setTotalAmount] = useState("0.00");
+
+  const calculate = (percentageValue) => {
+    if (
+      bill === 0 ||
+      isNaN(bill) ||
+      bill.length === 0 ||
+      numPeople === 0 ||
+      isNaN(numPeople) ||
+      numPeople.length === 0
+    ) {
+      setTipAmount("0.00");
+      setTotalAmount("0.00");
+    } else {
+      const tip = (bill * percentageValue) / 100;
+      const total = (bill + tip) / numPeople;
+
+      setTipAmount(tip.toFixed(2));
+      setTotalAmount(total.toFixed(2));
+    }
+  };
 
   return (
     <div className="App">
@@ -24,9 +42,7 @@ export default function App() {
           setBill={setBill}
           numPeople={numPeople}
           setNumPeople={setNumPeople}
-          customPercentage={customPercentage}
-          setTipAmount={setTipAmount}
-          setTotalAmount={setTotalAmount}
+          calculate={calculate}
         />
 
         <ResultsContainer
@@ -35,7 +51,6 @@ export default function App() {
           totalAmount={totalAmount}
           setTotalAmount={setTotalAmount}
           setBill={setBill}
-          setCustomPercentage={setCustomPercentage}
           setNumPeople={setNumPeople}
         />
       </div>

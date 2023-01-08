@@ -7,21 +7,18 @@ export default function ResultsContainer(props) {
     totalAmount,
     setTotalAmount,
     setBill,
-    setCustomPercentage,
     setNumPeople,
   } = props;
 
   const reset = () => {
     setBill("");
-    setCustomPercentage("");
     setNumPeople(1);
-    setTipAmount(0.0);
-    setTotalAmount(0.0);
+    setTipAmount('0.00');
+    setTotalAmount('0.00');
   };
 
   return (
-    <div className="results-container-wrapper">
-      <div className="results-container">
+    <div className="results-container">
         <div className="results-box">
           <div className="txt-box">
             <h4>Tip Amount</h4>
@@ -29,7 +26,7 @@ export default function ResultsContainer(props) {
           </div>
 
           <div className="number-box">
-            <h2>${tipAmount.toFixed(2)}</h2>
+            <h2>${tipAmount}</h2>
           </div>
         </div>
 
@@ -40,12 +37,10 @@ export default function ResultsContainer(props) {
           </div>
 
           <div className="number-box">
-            <h2>${totalAmount.toFixed(2)}</h2>
+            <h2>${totalAmount}</h2>
           </div>
         </div>
-
-        <button onClick={reset}>RESET</button>
-      </div>
+      <div className="res"><button className="reset-button" onClick={reset}>RESET</button></div>
     </div>
   );
 }
