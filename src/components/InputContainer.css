@@ -46,7 +46,6 @@ p {
 .percentage {
   display: grid;
   gap: 16px 14px;
-
   grid-template-columns: repeat(3, 2fr);
   width: 100%;
   margin: 0;
@@ -69,23 +68,6 @@ p {
 .custom-input,
 .percentage-btn {
   width: 117px;
-}
-
-@media screen and (max-width: 846px) {
-  .percentage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .percentage-btn {
-    width: 146px;
-  }
-
-  .custom-input,
-  .percentage-btn {
-    width: 146.6px;
-  }
 }
 
 .percentage-btn:hover {
@@ -116,4 +98,21 @@ p {
 .warning {
   float: right;
   color: #e17457;
+}
+
+@media screen and (max-width: 846px) {
+  .percentage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .percentage-btn {
+    width: 146px;
+  }
+
+  .custom-input,
+  .percentage-btn {
+    width: 146.6px;
+  }
 }

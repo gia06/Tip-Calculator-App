@@ -8,18 +8,11 @@
   padding: 40px;
 }
 
-@media screen and (max-width: 621px) {
-  .results-container {
-    padding: 0 22px 0 24px;
-    height: 257px;
-  }
-}
-
 .results-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 0;
+  margin-bottom: 25px;
 }
 
 h4 {
@@ -49,18 +42,13 @@ h2 {
   letter-spacing: -1px;
 }
 
-@media screen and (max-width: 621px) {
-  h2 {
-    font-size: 32px;
-  }
-}
-
 .res {
   display: flex;
   justify-content: center;
 }
 
 .reset-button {
+  margin-top: 97px;
   width: 100%;
   min-width: 281px;
   max-width: 333px;
@@ -69,15 +57,30 @@ h2 {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  color: #00474B;
+  color: #00474b;
 }
 
 .reset-button:hover {
   background-color: #9fe8df;
   pointer-events: none;
+}
+
+@media screen and (max-width: 621px) {
+  .results-container {
+    padding: 37 22px 0 24px;
+    height: 257px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .reset-button {
+    margin-top: 7px;
+  }
 }
