@@ -72,6 +72,7 @@ h2 {
 
 @media screen and (max-width: 621px) {
   .results-container {
+    margin-top: 32px;
     padding: 37 22px 0 24px;
     height: 257px;
   }
