@@ -1,7 +1,7 @@
 .input-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 45%;
   min-width: 311px;
   max-width: 379px;
