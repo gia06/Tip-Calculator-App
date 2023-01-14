@@ -2,7 +2,7 @@ import "./InputContainer.css";
 
 export default function Test(props) {
   const { bill, setBill, numPeople, setNumPeople, calculate } = props;
-  
+
   const error = {
     border: "2px solid #E17052",
   };
