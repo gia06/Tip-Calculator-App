@@ -59,7 +59,9 @@ input::-webkit-inner-spin-button {
   .calc-container {
     height: 100vh;
   }
+}
 
+@media screen and (min-height: 933px) {
   body {
     overflow: hidden;
   }
